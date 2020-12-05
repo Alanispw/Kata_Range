@@ -33,5 +33,19 @@ export default class Range {
         else r1 = R.nums[R.nums.length -1];
         return [l1, r1];
     }
+    contains(a,b) {
+        const A = this.parseInput(a);
+        const B = this.parseInput(b);
+        let l1, l2, r1, r2; 
+        if(A.leftP === '(') l1 = A.nums[0] + 1;
+        else l1 = A.nums[0];
+        if(A.rightP === ')') r1 = A.nums[A.nums.length - 1] - 1;
+        else r1 = A.nums[A.nums.length -1];
+        if(B.leftP === '(') l2 = B.nums[0] + 1;
+        else l2 = B.nums[0];
+        if(B.rightP === ')') r2 = B.nums[R.nums.length - 1] - 1;
+        else r2 = B.nums[B.nums.length -1];
+        return l1 <= l2 && r1 >= r2;
+    }
     
 }

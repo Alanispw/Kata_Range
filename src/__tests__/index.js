@@ -39,5 +39,11 @@ describe('range', () => {
         const range = new Range();
         const r1 = range.readInput('/tests/r3');
         expect(range.endPoints(r1)).toEqual([2,4]);
-    })
+    });
+    it('Contain range', () => {
+        const range = new Range();
+        const r1 = range.readInput('/tests/r3');
+        const r2 = range.readInput('/tests/r1');
+        expect(range.contains(r1,r2)).toEqual(true);
+    });
 });
