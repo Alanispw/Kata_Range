@@ -35,4 +35,9 @@ describe('range', () => {
         const r1 = range.readInput('/tests/r2');
         expect(range.getAllPoints(r1)).toEqual([3,4,5,6,7,8,9,10]);
     });
+    it('Get endpoints from range', () => {
+        const range = new Range();
+        const r1 = range.readInput('/tests/r3');
+        expect(range.endPoints(r1)).toEqual([2,4]);
+    })
 });

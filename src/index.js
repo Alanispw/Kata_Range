@@ -24,5 +24,14 @@ export default class Range {
         }
         return res;
     }
+    endPoints(r){
+        const R = this.parseInput(r);
+        let l1, r1; 
+        if(R.leftP === '(') l1 = R.nums[0] + 1;
+        else l1 = R.nums[0];
+        if(R.rightP === ')') r1 = R.nums[R.nums.length - 1] - 1;
+        else r1 = R.nums[R.nums.length -1];
+        return [l1, r1];
+    }
     
 }
