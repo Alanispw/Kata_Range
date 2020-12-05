@@ -1,3 +1,7 @@
-import rr from './test';
+import fs  from 'fs';
 
-console.log(rr);
+export default class Range {
+    readInput(path){
+        return fs.readFileSync(path, 'utf8');
+    }
+}
