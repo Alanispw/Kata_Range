@@ -47,5 +47,10 @@ export default class Range {
         else r2 = B.nums[B.nums.length -1];
         return l1 <= l2 && r1 >= r2;
     }
+    areEquals(r1, r2) {
+        const [L1, R1] = this.endPoints(r1);
+        const [L2, R2] = this.endPoints(r2);
+        return L1 === L2 && R1 === R2;
+    }
     
 }
