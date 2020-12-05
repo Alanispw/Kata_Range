@@ -52,5 +52,9 @@ export default class Range {
         const [L2, R2] = this.endPoints(r2);
         return L1 === L2 && R1 === R2;
     }
-    
+    overlapsRange(r1, r2) {
+        const [L1, R1] = this.endPoints(r1);
+        const [L2, R2] = this.endPoints(r2);
+        return L1 <= L2 || R1 >= R2;
+    }
 }

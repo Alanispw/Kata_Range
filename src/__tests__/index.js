@@ -57,5 +57,11 @@ describe('range', () => {
         const r1 = range.readInput('/tests/r4');
         const r2 = range.readInput('/tests/r1');
         expect(range.areEquals(r1,r2)).toEqual(true);
+    });
+    it('Should overlap range', () => {
+        const range = new Range();
+        const r1 = range.readInput('/tests/r4');
+        const r2 = range.readInput('/tests/r2');
+        expect(range.overlapsRange(r1,r2)).toEqual(true);
     })
 });
